@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  --ff-sans-serif: 'Inter', sans-serif;
+  --ff-serif: 'Lora', serif;
+  --ff-monospace: 'Inconsolata', monospace;
+
+  /* --fw-light: 300; */
+  --fw-regular: 400;
+  /* --fw-medium: 500; */
+  /* --fw-semi-bold: 600; */
+  --fw-bold: 700;
+
+  --fs-07: 0.438rem;
+  --fs-08: 0.5em;
+  --fs-09: 0.563em;
+  --fs-10: 0.625rem;
+  --fs-11: 0.688em;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-30: 1.875em;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-50: 3.125em;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
+
+  /* Basics */
+  --clr-black: hsl(0, 0%, 2%);
+  --clr-white: hsla(0, 0%, 100%, 1);
+
+  --clr-dark-1: hsl(0, 0%, 12%);
+  --clr-dark-2: hsl(0, 0%, 18%);
+  --clr-dark-3: hsl(0, 0%, 23%);
+
+  --clr-grey-1: hsla(0, 0%, 46%, 1);
+  --clr-grey-2: hsla(0, 0%, 91%, 1);
+  --clr-grey-3: hsla(0, 0%, 96%, 1);
+  --clr-grey-4: hsla(0, 0%, 81%, 1);
+
+  --clr-purple: hsla(274, 82%, 60%, 1);
+  --clr-red: hsla(0, 100%, 66%, 1);
+
+  /* Text */
+
+  /* Elements */
+
+  /* Background  */
+
+  /* Others */
+}
+
+body {
+  background: var(--clr-white);
+  color: var(--clr-black);
+  font-family: var(--ff-sans-serif);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-regular);
+  line-height: 1.25;
+  text-align: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
