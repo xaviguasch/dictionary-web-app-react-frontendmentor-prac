@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 
+import Header from './components/Header'
 import InputForm from './components/InputForm'
 import WordDisplay from './components/WordDisplay'
 import { fetchDictionaryWord } from './api/utils'
-import styles from './App.modules.css'
+import styles from './App.module.css'
 
 function App() {
   const [word, setWord] = useState('')
@@ -28,7 +29,8 @@ function App() {
 
   return (
     <>
-      <h1>Dictionary Web App</h1>
+      <Header />
+      <h1 className={styles.heading}>Dictionary Web App</h1>
       <InputForm onHandleWord={handleWord} />
       {data && <WordDisplay data={data} />}
     </>

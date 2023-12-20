@@ -13,6 +13,8 @@
 /* ================== */
 
 :root {
+  --item-color: brown;
+
   --ff-sans-serif: 'Inter', sans-serif;
   --ff-serif: 'Lora', serif;
   --ff-monospace: 'Inconsolata', monospace;

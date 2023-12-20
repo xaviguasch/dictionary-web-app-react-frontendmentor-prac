@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './WordDisplay.modules.css'
+import styles from './WordDisplay.module.css'
 
 const WordDisplay = ({ data }) => {
   const { word, phonetic, meanings, sourceUrls } = data

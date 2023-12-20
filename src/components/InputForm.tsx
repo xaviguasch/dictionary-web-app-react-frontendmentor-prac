@@ -27,7 +27,7 @@ const InputForm = ({ onHandleWord }) => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <button>Enter</button>
+        <button className={styles.btn}>Enter</button>
       </form>
     </>
   )
