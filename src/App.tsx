@@ -10,8 +10,12 @@ function App() {
   const [word, setWord] = useState('')
   const [data, setData] = useState(null)
 
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(false)
   const [font, setFont] = useState('sans-serif')
+
+  const themeClass = theme ? 'dark' : 'light'
+
+  console.log(themeClass)
 
   useEffect(() => {
     const handleFetchWord = async () => {
@@ -26,11 +30,8 @@ function App() {
     return () => {}
   }, [word])
 
-  const handleThemeSwitch = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    console.log('now theme is: ', newTheme)
-
-    setTheme(newTheme)
+  const handleThemeSwitch = (theme) => {
+    setTheme(theme)
   }
 
   const handleWord = (inputWord: string) => {
@@ -43,7 +44,12 @@ function App() {
 
   return (
     <div className={classes.App} data-theme={theme}>
-      <Header onHandleChangeFont={handleChangeFont} font={font} />
+      <Header
+        onHandleChangeFont={handleChangeFont}
+        font={font}
+        onHandleThemeSwitch={handleThemeSwitch}
+        theme={theme}
+      />
       <InputForm onHandleWord={handleWord} />
       {data && <WordDisplay data={data} />}
     </div>
