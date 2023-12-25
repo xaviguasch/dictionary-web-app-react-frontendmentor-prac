@@ -1,12 +1,16 @@
-import React from 'react'
+import FontPicker from './FontPicker'
 
 import styles from './Header.module.css'
+import LogoSvg from '../assets/images/logo.svg'
 
-const Header = () => {
-  const dynamicColor = 'blue'
+const Header = ({ onHandleChangeFont, font }) => {
   return (
-    <div className={styles.Header} style={{ '--item-color': dynamicColor }}>
-      Header
+    <div className={styles.Header}>
+      <img src={LogoSvg} alt='Logo' />
+
+      <div>
+        <FontPicker onHandleChangeFont={onHandleChangeFont} font={font} />
+      </div>
     </div>
   )
 }

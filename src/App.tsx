@@ -4,11 +4,14 @@ import Header from './components/Header'
 import InputForm from './components/InputForm'
 import WordDisplay from './components/WordDisplay'
 import { fetchDictionaryWord } from './api/utils'
-import styles from './App.module.css'
+import classes from './App.module.css'
 
 function App() {
   const [word, setWord] = useState('')
   const [data, setData] = useState(null)
+
+  const [theme, setTheme] = useState('light')
+  const [font, setFont] = useState('sans-serif')
 
   useEffect(() => {
     const handleFetchWord = async () => {
@@ -23,17 +26,27 @@ function App() {
     return () => {}
   }, [word])
 
+  const handleThemeSwitch = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    console.log('now theme is: ', newTheme)
+
+    setTheme(newTheme)
+  }
+
   const handleWord = (inputWord: string) => {
     setWord(inputWord)
   }
 
+  const handleChangeFont = (newFont) => {
+    setFont(newFont)
+  }
+
   return (
-    <>
-      <Header />
-      <h1 className={styles.heading}>Dictionary Web App</h1>
+    <div className={classes.App} data-theme={theme}>
+      <Header onHandleChangeFont={handleChangeFont} font={font} />
       <InputForm onHandleWord={handleWord} />
       {data && <WordDisplay data={data} />}
-    </>
+    </div>
   )
 }
 
