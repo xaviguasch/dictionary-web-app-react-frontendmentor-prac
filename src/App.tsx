@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <div className={classes.App} data-theme={theme}>
+    <div className={classes.App} data-theme={themeClass}>
       <Header
         onHandleChangeFont={handleChangeFont}
         font={font}
