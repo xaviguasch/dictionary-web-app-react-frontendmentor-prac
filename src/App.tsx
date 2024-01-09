@@ -18,6 +18,20 @@ function App() {
   console.log(themeClass)
 
   useEffect(() => {
+    const setDarkMode = () =>
+      document.querySelector('body')?.setAttribute('data-theme', 'dark')
+
+    const setLightMode = () =>
+      document.querySelector('body')?.setAttribute('data-theme', 'light')
+
+    if (theme) {
+      setDarkMode()
+    } else {
+      setLightMode()
+    }
+  }, [theme])
+
+  useEffect(() => {
     const handleFetchWord = async () => {
       const { error, response } = await fetchDictionaryWord(word)
       setData(response[0])
@@ -43,7 +57,7 @@ function App() {
   }
 
   return (
-    <div className={classes.App} data-theme={themeClass}>
+    <div className={classes.App}>
       <Header
         onHandleChangeFont={handleChangeFont}
         font={font}
