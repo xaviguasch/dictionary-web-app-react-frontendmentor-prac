@@ -57,7 +57,7 @@ function App() {
   }
 
   return (
-    <div className={classes.App}>
+    <div className={`${classes.App} ${font}`}>
       <Header
         onHandleChangeFont={handleChangeFont}
         font={font}

@@ -115,5 +115,19 @@ ul {
 }
 
 /* ================== */
+/* Helper classes */
+/* ================== */
+
+.mono {
+  font-family: var(--ff-monospace);
+}
+.serif {
+  font-family: var(--ff-serif);
+}
+.sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+/* ================== */
 /* Typography */
 /* ================== */
