@@ -1,0 +1,16 @@
+.Fontpicker {
+}
+
+.form {
+}
+
+.form select {
+  font-family: inherit;
+  color: var(--main-font-color);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-bold);
+  border: none;
+  background: transparent;
+
+  text-align: right;
+}

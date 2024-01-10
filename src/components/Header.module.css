@@ -1,3 +1,16 @@
 .Header {
-  color: var(--item-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.logo {
+  width: 28px;
+  height: 32px;
 }

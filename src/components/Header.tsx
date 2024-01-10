@@ -1,15 +1,15 @@
 import FontPicker from './FontPicker'
 import ThemeCheckbox from './ThemeCheckbox'
 
-import styles from './Header.module.css'
-import LogoSvg from '../assets/images/logo.svg'
+import classes from './Header.module.css'
+import LogoSvg from '../assets/images/logo.svg?react'
 
 const Header = ({ onHandleChangeFont, font, onHandleThemeSwitch, theme }) => {
   return (
-    <div className={styles.Header}>
-      <img src={LogoSvg} alt='Logo' />
+    <div className={classes.Header}>
+      <LogoSvg className={classes.logo} />
 
-      <div>
+      <div className={classes.inputGroup}>
         <FontPicker onHandleChangeFont={onHandleChangeFont} font={font} />
         <ThemeCheckbox onHandleThemeSwitch={onHandleThemeSwitch} theme={theme} />
       </div>

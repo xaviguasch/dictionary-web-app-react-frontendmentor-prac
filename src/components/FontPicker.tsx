@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import classes from './FontPicker.module.css'
 
 const FontPicker = ({ onHandleChangeFont, font }) => {
@@ -8,7 +9,7 @@ const FontPicker = ({ onHandleChangeFont, font }) => {
 
   return (
     <div className={classes.FontPicker}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={classes.form}>
         <select
           id='font-select'
           value={font}
@@ -21,8 +22,6 @@ const FontPicker = ({ onHandleChangeFont, font }) => {
           <option value='mono'>Mono</option>
         </select>
       </form>
-      <p>{font}</p>
-      <p>FontPicker</p>
     </div>
   )
 }
