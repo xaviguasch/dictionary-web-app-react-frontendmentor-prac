@@ -1,17 +1,11 @@
-import { useState, useEffect, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 
-import styles from './InputForm.module.css'
+import classes from './InputForm.module.css'
+
+import SearchIcon from '../assets/images/icon-search.svg?react'
 
 const InputForm = ({ onHandleWord }) => {
   const [inputText, setInputText] = useState('')
-
-  // useEffect(() => {
-  //   first
-
-  //   return () => {
-  //     second
-  //   }
-  // }, [third])
 
   const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -24,10 +18,11 @@ const InputForm = ({ onHandleWord }) => {
       <form onSubmit={handleFormSubmit}>
         <input
           type='text'
+          className={classes.input}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <button className={styles.btn}>Enter</button>
+        <SearchIcon />
       </form>
     </>
   )
