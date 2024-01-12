@@ -22,7 +22,7 @@ const InputForm = ({ onHandleWord }) => {
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <SearchIcon className={classes.searchIconSvg} />
+        <SearchIcon className={classes.searchIconSvg} onClick={handleFormSubmit} />
       </form>
     </>
   )

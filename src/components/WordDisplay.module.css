@@ -1,0 +1,112 @@
+.WordDisplay {
+}
+
+.mainWord {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.word {
+  font-size: var(--fs-32);
+  font-weight: var(--fw-bold);
+}
+
+.phonetic {
+  font-size: var(--fs-18);
+  color: var(--clr-purple);
+}
+
+.partOfSpeech {
+  margin-top: 28px;
+}
+
+.lineGroup {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.horizontalLine {
+  height: 1px;
+  background-color: var(--divider-color);
+  position: absolute;
+  right: 0;
+  width: 80%;
+  transform: translateY(13px);
+}
+
+.partOfTitle {
+  font-size: var(--fs-18);
+  font-style: italic;
+  font-weight: var(--fw-bold);
+}
+
+.playIcon {
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  cursor: pointer;
+}
+
+.info {
+  margin-top: 28px;
+}
+
+.meaning {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-normal);
+  color: var(--clr-grey-1);
+  margin-top: 32px;
+}
+
+.list {
+  list-style: inside;
+  list-style-position: outside;
+  padding-left: 18px;
+}
+
+.list li {
+  margin-top: 12px;
+}
+
+.example {
+  margin-top: 13px;
+  color: var(--clr-grey-1);
+}
+
+.synonyms {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-normal);
+  color: var(--clr-grey-1);
+}
+
+.synonymGroup {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.synonymResults {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.synonymResults span {
+  margin-right: 16px;
+  color: var(--clr-purple);
+  font-weight: var(--fw-bold);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--divider-color);
+
+  width: 100%;
+  margin-top: 32px;
+}

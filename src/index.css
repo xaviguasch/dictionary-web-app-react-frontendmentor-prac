@@ -58,6 +58,7 @@
   --clr-dark-1: hsl(0, 0%, 12%);
   --clr-dark-2: hsl(0, 0%, 18%);
   --clr-dark-3: hsl(0, 0%, 23%);
+  --clr-dark-4: hsla(0, 0%, 23%, 1);
 
   --clr-grey-1: hsl(0, 0%, 46%);
   --clr-grey-2: hsla(0, 0%, 91%, 1);
@@ -84,6 +85,7 @@
   --main-font-color: var(--clr-dark-2);
   --input-background-color: var(--clr-grey-3);
   --switcher-background-color: var(--clr-grey-1);
+  --divider-color: var(--clr-grey-2);
 }
 
 [data-theme='dark'] {
@@ -91,15 +93,16 @@
   --main-font-color: var(--clr-white);
   --input-background-color: var(--clr-dark-1);
   --switcher-background-color: var(--clr-purple);
+  --divider-color: var(--clr-dark-4);
 }
 
 body {
   background: var(--background-col);
   color: var(--main-font-color);
   font-family: var(--ff-sans-serif);
-  font-size: var(--fs-16);
+  font-size: var(--fs-15);
   font-weight: var(--fw-regular);
-  line-height: 1.25;
+  line-height: 1.6;
   text-align: left;
 }
 
