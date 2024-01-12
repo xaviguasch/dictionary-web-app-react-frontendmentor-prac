@@ -15,14 +15,14 @@ const InputForm = ({ onHandleWord }) => {
 
   return (
     <>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className={classes.InputForm}>
         <input
           type='text'
           className={classes.input}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <SearchIcon />
+        <SearchIcon className={classes.searchIconSvg} />
       </form>
     </>
   )
