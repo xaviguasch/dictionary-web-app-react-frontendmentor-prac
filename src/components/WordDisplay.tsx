@@ -2,14 +2,17 @@ import React from 'react'
 import classes from './WordDisplay.module.css'
 
 import PlayIcon from '../assets/images/icon-play.svg?react'
+import NewWindowIcon from '../assets/images/icon-new-window.svg?react'
 
 const WordDisplay = ({ data }) => {
   const { word, phonetic, meanings, sourceUrls, phonetics } = data
   console.log(data)
 
-  const playAudio = () => {
-    console.log('play audio')
+  if (word === 'not found') {
+    return <p>not found</p>
+  }
 
+  const playAudio = () => {
     const urlAudio = phonetics.find((pho) => pho.audio).audio
 
     const audio = new Audio(urlAudio)
@@ -50,7 +53,7 @@ const WordDisplay = ({ data }) => {
                   })}
                 </ul>
 
-                {synonyms.lenght > 0 && (
+                {synonyms.length > 0 && (
                   <div className={classes.synonymGroup}>
                     <h3 className={classes.synonyms}>Synonyms</h3>
 
@@ -67,10 +70,11 @@ const WordDisplay = ({ data }) => {
 
           <div className={classes.divider}></div>
 
-          <h4>Source</h4>
+          <h3 className={classes.source}>Source</h3>
           {sourceUrls.map((sURL) => (
-            <a key={sURL} href={sURL}>
+            <a key={sURL} href={sURL} className={classes.url}>
               {sURL}
+              <NewWindowIcon className={classes.newWindowIcon} />
             </a>
           ))}
         </div>

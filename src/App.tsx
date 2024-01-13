@@ -13,6 +13,8 @@ function App() {
   const [theme, setTheme] = useState(false)
   const [font, setFont] = useState('sans-serif')
 
+  const [isError, setIsError] = useState(false)
+
   const themeClass = theme ? 'dark' : 'light'
 
   console.log(themeClass)
@@ -34,7 +36,15 @@ function App() {
   useEffect(() => {
     const handleFetchWord = async () => {
       const { error, response } = await fetchDictionaryWord(word)
-      setData(response[0])
+
+      if (error) {
+        setIsError(true)
+        console.log(error)
+        console.log('there is an error')
+      } else {
+        setIsError(false)
+        setData(response[0])
+      }
     }
 
     if (word.length > 0) {
@@ -65,7 +75,8 @@ function App() {
         theme={theme}
       />
       <InputForm onHandleWord={handleWord} />
-      {data && <WordDisplay data={data} />}
+      {isError && <p>No definitions found</p>}
+      {data && !isError && <WordDisplay data={data} />}
     </div>
   )
 }

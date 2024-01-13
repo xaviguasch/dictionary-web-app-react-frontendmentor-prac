@@ -110,3 +110,22 @@
   width: 100%;
   margin-top: 32px;
 }
+
+.source {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-normal);
+  color: var(--clr-grey-1);
+  margin-top: 32px;
+  text-decoration: underline;
+}
+
+.url {
+  color: var(--main-font-color);
+
+  display: flex;
+  gap: 8px;
+}
+
+.newWindowIcon {
+  margin-top: 4px;
+}
