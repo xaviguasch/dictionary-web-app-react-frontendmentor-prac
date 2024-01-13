@@ -20,3 +20,12 @@
   right: 24px;
   cursor: pointer;
 }
+
+.empty {
+  border: 1px solid var(--clr-red);
+}
+
+.error {
+  color: var(--clr-red);
+  font-size: var(--fs-16);
+}

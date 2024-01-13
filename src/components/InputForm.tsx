@@ -25,11 +25,14 @@ const InputForm = ({ onHandleWord }) => {
       <form onSubmit={handleFormSubmit} className={classes.InputForm}>
         <input
           type='text'
-          className={classes.input}
+          className={`${classes.input} ${isEmpty && classes.empty}`}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
+
         <SearchIcon className={classes.searchIconSvg} onClick={handleFormSubmit} />
+
+        {isEmpty && <p className={classes.error}>Whoops, can’t be empty…</p>}
       </form>
     </>
   )
