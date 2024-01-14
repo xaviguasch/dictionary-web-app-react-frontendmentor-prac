@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import classes from './FontPicker.module.css'
 
 const FontPicker = ({ onHandleChangeFont, font }) => {

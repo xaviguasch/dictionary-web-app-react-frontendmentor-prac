@@ -1,4 +1,3 @@
-import React from 'react'
 import classes from './WordDisplay.module.css'
 
 import PlayIcon from '../assets/images/icon-play.svg?react'

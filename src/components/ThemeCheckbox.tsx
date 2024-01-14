@@ -1,6 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
 
-import React from 'react'
 import classes from './ThemeCheckbox.module.css'
 
 import LogoIcon from '../assets/images/icon-moon.svg?react'
