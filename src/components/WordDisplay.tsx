@@ -6,11 +6,6 @@ import NewWindowIcon from '../assets/images/icon-new-window.svg?react'
 
 const WordDisplay = ({ data }) => {
   const { word, phonetic, meanings, sourceUrls, phonetics } = data
-  console.log(data)
-
-  if (word === 'not found') {
-    return <p>not found</p>
-  }
 
   const playAudio = () => {
     const urlAudio = phonetics.find((pho) => pho.audio).audio

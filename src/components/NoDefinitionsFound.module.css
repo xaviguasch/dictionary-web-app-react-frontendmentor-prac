@@ -1,0 +1,20 @@
+.NoDefinitionsFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.title {
+  font-size: var(--fs-20);
+}
+
+.text {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--clr-grey-1);
+}

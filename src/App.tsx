@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import InputForm from './components/InputForm'
 import WordDisplay from './components/WordDisplay'
+import NoDefinitionsFound from './components/NoDefinitionsFound'
 import { fetchDictionaryWord } from './api/utils'
 import classes from './App.module.css'
 
@@ -75,7 +76,7 @@ function App() {
         theme={theme}
       />
       <InputForm onHandleWord={handleWord} />
-      {isError && <p>No definitions found</p>}
+      {isError && <NoDefinitionsFound />}
       {data && !isError && <WordDisplay data={data} />}
     </div>
   )
